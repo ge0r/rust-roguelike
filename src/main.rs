@@ -3,6 +3,11 @@ use specs::prelude::*;
 use std::cmp::{max, min};
 use specs_derive::Component;
 
+#[derive(PartialEq, Copy, Clone)]
+enum TileType {
+    Wall, Floor
+}
+
 #[derive(Component)]
 struct Position {
     x: i32,
